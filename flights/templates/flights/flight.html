@@ -1,6 +1,6 @@
 {% extends "flights/base.html" %}
 {% block title %}
-    Flight
+    Flight {{ flight.id }}
 {% endblock %}
     
 {% block body %}
@@ -8,6 +8,8 @@
     <ul>
         <li>Origin: {{ flight.origin }}</li>
         <li>Destination: {{ flight.destination }}</li>
+        <li>Duration: {{ flight.duration }}</li>
+        <li>Valid: {{ flight.is_valid_flight }}</li>
     </ul>
     <h1> Passengers </h1>
     <ul>
